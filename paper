@@ -1,0 +1,220 @@
+
+PERANCANGAN SISTEM KENDALI PERALATAN RUMAH TANGGA BERBASIS ANDROID MENGGUNAKAN PROGRAMABLE LOGIC CONTROL (PLC) DAN RASPBERRY PI
+
+
+Ageng Budiman
+Jurusan Teknik Informatika
+Sekolah Tinggi Teknik PLN Jakarta
+agengboon@gmail.com
+
+
+ABSTRAK
+
+Semakin pesatnya perkembangan Teknlogi canggih dan mutahir di era globalisasi dibutuhkan waktu yang cepat dan biaya yang efisien dalam melakukan segala kegiatan sehari-hari tanpa mengurangi faktor kenyamanan, keselamatan dan keamanan tentunya. Beberapa kegiatan yang dilakukan masyarakat secara umum yang masih konvensional contoh dalam pengontrolan peralatan rumah tangga, seperti menghidup/matikan lampu, pengontrolan AC/kipas, dan kegiatan membuka/menutup pintu. Ini merupakan ide awal penulis untuk merancang sebuah sistem yang terintegrasi dengan memanfaatkan beberapa ilmu dan teknologi yang berkembang saat ini. Dalam kasus ini penulis menggunakan beberapa teori diantaranya, pemanfaatan Smartphone berbasis Android sebagai media kontrol yang sudah sangat umum digunakan masyarakat saat ini, dengan memanfaatkan HTML5 dalam membangun sebuah aplikasi Android untuk Smartphone inilah nanti yang menjadi media yang akan melakukan inputan dalam sistem, berlanjut dari Smartphone yang akan terhubung dengan jaringan wireless sehingga bisa mengirim data ke webserver yang dalam hal ini penulis gunakan Raspberry pi. Dari sinilah inputan diterima dan dikirim ke Programmable Logic Control (PLC) untuk diolah menjadi instruksi-instruksi yang menghasilkan outputan sesuai penguna inginkan. Dengan perancangan sistem kendali peralatan rumah tangga terintegrasi berbasis Android menggunakan PLC dan Raspberry ini, diharapkan pengendalian peralatan rumah akan lebih nyaman, aman, hemat dari penggunaan energi listrik, dan memberi kemudahan untuk mengendalikan alat-alat elektronik dan peralatan listrik.
+ 
+Kata kunci : Android, PLC, Raspberry pi, webserver, smartphone, HTML5
+
+ABSTRACT
+
+The rapid development of advanced technology and leading edge in the era of rapid globalization, it takes time and cost efficient in performing all daily activities without compromising the comfort factor, the safety and security of course. Some of the activities carried out in the general public are still conventional example in controlling household appliances, such as turned on / off lights, controlling the AC / fan, and activities open / close the door. This is an original idea the author to design an integrated system by utilizing some of the science and technology developed at this time. In this case the author uses several theories including, the use of Android-based smartphones as media control that is very commonly used in today's society, using HTML5 to build an Android application for smartphones is later became the media will do the input in the system, continues on Smartphone which will be connected to the wireless network so that it can send data to a webserver which in this case I use Raspberry pi. From this input is received and sent to a Programmable Logic Control (PLC) to be processed into the instructions that generate corresponding user outputan want. With the design of the control systems of household appliances use the Android-based integrated PLC and Raspberry, it is expected the control of home appliances will be more comfortable, safer, saving of electrical energy use, and provide convenience to control electrical appliances and electrical equipment.
+
+Keywords: Android, PLC, Raspberry pi, webserver, smartphones, HTML5
+
+ 
+1.  Pendahuluan
+
+Pada zaman saat ini semakin pesatnya perkembangan teknologi canggih dan mutahir di era Globalisasi dibutuhkan waktu yang cepat dan biaya yang efisien dalam melakukan segala kegiatan sehari-hari tanpa mengurangi faktor kenyamanan, keselamatan dan keamanan tentunya. Faktor utama yang dihadapi oleh masyarakat dalam menjalani kehidupan di zaman modern saat ini adalah melakukan pengaturan peralatan rumah tangga yang rumit dengan contoh masih konvensionalnya pekerjaan menghidupkan dan mematikan lampu, membuka pintu atau gerbang masih menggunakan alat bantu manusia, membuka tirai rumah masih manual, menghidupkan kipas angin masih belum terkontrol pada satu pusat dan masih banyak lagi masalah-masalah yang dihadapi masyarakat dalam urusan pengaturan peralatan rumah tangga.
+Untuk mengatasi hal tersebut di atas, dibutuhkan suatu sistem pengontrol seluruh peralatan rumah tangga yang memberikan segala kenyamanan, keselamatan, keamanan dan membantu penghematan sumber daya energi di bidang kelistrikan. Dengan memanfaatkan teknologi koneksi wireless, PLC, Raspberry serta media kontrol menggunakan smartphone Android, maka seluruh kegiatan yang berhubungan dengan alat rumah tangga dapat terkontrol terpusat pada suatu media(sistem). Disini peneliti difokuskan pada pembuatan Aplikasi Pengontrolan Alat-alat rumah tangga dari segi hardware maupun software dengan memadukan hardware dan software maka akan terbentuk sistem pengontrolan alat-alat rumah tangga terintegrasi berbasis Andoroid yang bisa membantu memudahkan pengontrolan alat-alat rumah tangga.
+
+2.	Landasan Teori
+
+A.	Programmable Logic Controller (PLC)
+Programmable Logic Controllers (PLC) adalah komputer elektronik yang mudah digunakan (user friendly) yang memiliki fungsi kendali untuk berbagai tipe dan tingkat kesulitan yang beraneka ragam. Definisi Programmable Logic Controller menurut Capiel (1982) adalah : “sistem elektronik yang beroperasi secara dijital dan didisain untuk pemakaian di lingkungan industri, dimana sistem ini menggunakan memori yang dapat diprogram untuk penyimpanan secara internal instruksi-instruksi yang mengimplementasikan fungsi-fungsi spesifik seperti logika, urutan, perwaktuan, pencacahan dan operasi aritmatik untuk mengontrol mesin atau proses melalui modul-modul I/O dijital maupun analog.”
+
+ 
+
+Gambar 1. Struktur Dasar PLC
+
+Berdasarkan namanya konsep PLC adalah sebagai berikut :
+1)	Programmable
+Menunjukkan kemampuan dalam hal memori untuk menyimpan program yang telah dibuat yang dengan mudah diubah-ubah fungsi atau kegunaannya.
+2)	Logic
+Menunjukkan kemampuan dalam memproses input secara aritmatik dan logic (ALU), yakni melakukan operasi membandingkan, menjumlahkan, mengalikan, membagi, mengurangi, negasi, AND, OR, dan lain sebagainya.
+
+3)	Controller
+Menunjukkan kemampuan dalam mengontrol dan mengatur proses sehingga menghasilkan output yang diinginkan.
+B.	Raspberry pi
+Raspberry Pi adalah sebuah komputer mini dengan single board yang dikembangkan di Inggris untuk keperluan pengajaran dasar-dasar komputer.
+
+
+
+
+
+
+
+
+
+
+Gambar 2. Raspberry Pi
+
+Spesifikasi :
+•	Chip: Broadcom BCM2835 (CPU, GPU, DSP, and SDRAM)
+•	CPU: 700 MHz ARM1176JZF-S core (ARM6 family)
+•	GPU: Broadcom VideoCore IV, OpenGL ES 2.0, 1080p30 h.264/MPEG-4 AVC high-profile decoder
+•	Memory (SDRAM): 256 MB (shared with GPU)
+•	USB 2.0 ports: 2 (via integrated USB hub)
+•	Video outputs:
+o	Composite RCA (PAL & NTSC), HDMI (rev 1.3 & 1.4), raw LCD Panels via DSI
+o	14 HDMI resolutions from 640×350 to 1920×1200 plus various PAL and NTSC standards.
+•	Audio outputs: 3.5 mm jack, HDMI
+•	Onboard storage: SD / MMC / SDIO card slot
+•	Onboard network: 10/100 Ethernet (RJ45)
+•	Low-level peripherals: 8 × GPIO, UART, I²C bus, SPI bus with two chip selects, +3.3 V, +5 V, ground[58][63]
+•	Power ratings: 700 mA (3.5 W)
+•	Power source: 5 volt via MicroUSB or GPIO header
+•	Size: 85.60 × 53.98 mm (3.370 × 2.125 in)
+•	Weight: 45 g (1.6 oz)
+•	Planned operating systems: Debian GNU/Linux, Fedora, Arch Linux ARM, RISC OS
+C.	Android
+Android adalah sistem operasi untuk telepon seluler yang berbasis Linux. Android menyediakan platform terbuka bagi para pengembang untuk menciptakan aplikasi mereka sendiri untuk digunakan oleh bermacam peranti bergerak. Awalnya, Google Inc. membeli Android Inc., pendatang baru yang membuat peranti lunak untuk ponsel. Kemudian untuk mengembangkan Android, dibentuklah Open Handset Alliance, konsorsium dari 34 perusahaan peranti keras, peranti lunak, dan telekomunikasi, termasuk Google, HTC, Intel, Motorola, QualCOMm, T-Mobile, dan Nvidia.
+D.	Web Server
+Web Server adalah sebuah software yang memberikan layanan data yang berfungsi menerima permintaan HTTP atau HTTPS dari client yang dikenal dengan browser web dan mengirimkan kembali hasilnya dalam bentuk halaman - halaman web yang umumnya berbentuk dokumen HTML. Web Server Suatu program (dan juga mesin yang menjalankan program) yang mengerti protokol HTTP dan dapat menanggapi permintaan-permintaan dari web browser yang menggunakan protokol tersebut.
+Macam-macam Web Server meliputi:
+a.	Apache Tomcat
+b.	Microsoft windows Server 2003 Internet Information Services (IIS)
+c.	Lighttpd
+d.	Sun Java System Web Server
+e.	Xitami Web Server
+f.	Zeus Web Server
+Tetapi web yang terkenal dan yang sering digunakan adalah Apache dan Microsoft Internet Information Service (IIS).
+E.	HTML 5
+Awal pertama di perkenalkan yang namanya HTML ini sekita tahun 1991 yang hanya mencakup 22 elemen dan kemudian di lanjutkan dengan HTML +,  maka di dalam perkembangan HTML tidak di kenal yang namanya HTML1. Dan pada tahun 1995 barulah kemudian di perkenalkan yang namanya HTML 2.0.
+Beberapa kelebihan yang dijanjikan pada HTML 5:
+•	Dapat ditulis dalam sintaks HTML (dengan tipe media text/html) dan XML.
+•	Integrasi yang lebih baik dengan aplikasi web dan pemrosesannya.
+•	Integrasi (’inline’) MathML dan SVG dengan doctype yang lebih sederhana.
+•	Penulisan kode yang lebih efisien.
+•	Dapat dimengerti oleh peramban lawas (backwards compatible). Sehingga istilah ‘deprecated’ tidak akan diperlukan lagi.
+
+3.	Metodologi Penelitian
+
+Pada penelitian ini penulis menggunakan model prototype. Dengan metode prototyping ini pengembang dan pelanggan dapat saling berinteraksi selama proses pembuatan sistem sehingga pengembang akan mengetahui dengan benar apa yang diinginkan pelanggan dengan tidak mengesampingkan segi-segi teknis dan pelanggan akan mengetahui proses-proses dalam menyelasaikan system yang diinginkan. Dengan demikian akan menghasilkan sistem sesuai dengan jadwal waktu penyelesaian yang telah ditentukan.
+Secara umum, dengan mengacau kedalam model Prototype dapat dilihat kerangka pemikiran pada diagram alir dibawah ini :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gambar 3. Flowchart Kerangka Pemikiran
+
+4.	Perancangan
+Perancangan merupakan inti kegiatan penulis dalam menyusun sebuah sistem terintegrasi peralatan rumah tangga berbasis Android menggunakan Programmable Logic Control (PLC) dan Raspberry pi. Dalam tahap ini penulis membagi menjadi tiga garis besar kegiatan perancangan diantaranya :
+•	Perancangan Sistem Keseluruhan
+•	Perancangan Perangkat Keras
+•	Perancangan Perangkat Lunak
+
+A.	Perancangan Sistem Keseluruhan
+Pada tahap ini digambarkan bagaimana sistem yang akan dibentuk secara garis besar nantinya dan bagaimana antara satu dengan yang lain dari bagian dari sistem dapat saling terintegrasi dengan baik.
+
+ 
+Gambar 4. Rancang Keseluruhan Sistem
+
+Pada gambar diatas dijelaskan bagaimana perancangan secara keseluruhan dan terintegrasi dari perangkat-perangkat yang akan penulis gunakan. Disini Smartphone yang telah terinstal aplikasi android nantinya akan berkomunikasi dengan Raspberry menggunukan jaringan wireless untuk bisa mengakses webserver dan memberikan data inputan, kemudian dari webserver inilah nantinya data inputan yang diterima akan diteruskan ke PLC melalui kabel RS232 sehingga bisa diolah oleh PLC yang sebelumnya telah diprogram untuk menghasilkan outputan yang diinginkan, dan berakibat terjadi perubahan kondisi pada peralatan-peralatan rumah tangga.
+B.	Perancangan Perangkat Keras
+Perancangan perangkat keras pada sistem dapat digambarkan.
+
+
+
+
+
+
+
+
+Gambar 5. Rancang Perangkat Keras
+Pada gambar dijelaskan bagaimana alat-alat yang digunakan saling berkomunikasi, RS232 nantinya akan mengirim inputan kepada PLC berupa sinyal digital yang akan diproses PLC untuk diterukan melalui port I/O yang akan mengubah kondisi peralatan rumah tangga sesuai yang diinginkan.
+C.	Perancangan Perangkat Lunak
+Perancangan perangkat lunak pada sistem dapat digambarkan.
+
+
+
+
+
+
+
+
+
+
+
+Gambar 6. Rancang Perangkat Lunak
+Pada gambar diatas dijelaskan bagaimana rancangan perangkat lunak yang akan dibuat, pada aplikasi yang akan diterapkan pada Smartphone Android. Sebelum bisa mengakses pengguna diharuskan Login terlebih dahulu sesuai data yang telah tersimpan pada database aplikasi untuk bisa mengakses aplikasi kontrol perlatan rumah tangga. Aplikasi akan melakukan looping sampai data yang diinput benar dan sesuai baru nantinya bisa mengakses aplikasi tersebut. Setelah selesai penggunaan pengguna diharapkan untuk logout dari aplikasi untuk mengurangi penggunaan diluar kendali pengguna.
+
+5.	Hasil dan Uji Coba
+Setelah melakukan analisa dan perancangan sistem, penulis akan mencoba memaparkan sebagian dari hasil penelitian mengenai peracangan sistem kendali peralatan rumah tangga berbasis Android menggunakan Programmable Logic Control dan Raspberry pi. Dan hasilnya tampak pada gambar di bawah ini.
+A.	Menu Login
+
+ 
+
+Gambar 7. Halaman Login
+
+Gambar diatas menunjukan penggunan diharuskan melakukan login sebelum menggunakan aplikasi tersebut.
+
+B.	Menu Utama (Home)
+
+ 
+
+Gambar 8. Halaman Home
+
+Gambar diatas menunjukan tampilan dari halaman utama (Home) dari aplikasi kontrol peralatan rumah tangga (Smarthome), terdapat header selamat datang dan tab bar menu yang terbagi atas tiga : home, kontrol, dan about.
+
+C.	Menu Kontrol
+
+ 
+
+Gambar 9. Halaman Kontrol
+
+Gambar diaatas menunjukan tampilan halaman kontrol yang merupakan halaman dimana user bisa mengontrol peralatan-peralatan rumah tangga, terdapat empat alat yang dapat dikontrol antaranya lampu ruang, lampu taman, gerbang, dan Kipas/AC. Dari masing-masing pilihan terdapat perintah-perintah yang bisa dipilih untuk nantinya dieksekusi dan memberi outputan pada peralatan rumah tangga tersebut.
+
+
+
+D.	Menu About
+
+ 
+
+Gambar 10. Halaman About
+
+Pada gambar diatas merupakan halaman About yang merupakan penjelasan bagi pengguna dalam pemakaian aplikasi Smarthome ini, disini nantinya akan dijelaskan petunjuk dan cara penggunaan agar pengguna nyaman dalam berinteraksi dengan aplikasi Smarthome ini.
+
+6.	Kesimpulan
+Berdasarkan dari uraian di atas, hal-hal yang dapat disimpulkan adalah :
+1.	Pemanfaatan teknologi terutama dalam bidang kontrol dapat menghasilkan sebuah sistem terintegrasi yang efektif untuk memudahkan suatu kerja atau kegiatan.
+2.	User dapat dengan mudah mengontrol peralatan-peralatan rumah tangga dengan Aplikasi Smarthome terinstal pada Smartphone berbasis Andorid tanpa menggunakan cara-cara konvensional.
+
+7.	Daftar Pustaka
+
+1.	Eko Putra, Agfianto.2004.Konsep, Pemograman, dan Aplikasi (Omron CPM1A/CPM2A dan ZEN Programmable Relay).Yogyakarta:Gava Media
+2.	Famosa, Raspberry PI B, http://www.famosastudio.com/raspberry-pi-model-b
+3.	IlmuKomputer ,HTML5,http://ilmukomputer.org/2012/10/27/games-sederhana-dengan-html5/
+4.	Codiqa, Mobile Prototyping, http://codiqa.com
+5.	DSP & Embedded Electronics, http://agfi.staff.ugm.ac.id/blog/index.php/category/plc/
