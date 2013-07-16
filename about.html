@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1">  
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Kontrol</title>
+        <link rel="stylesheet" href="jqm/jquery.mobile-1.3.1.min.css" />
+        <script src="jqm/jquery.js"></script>
+        <script src="jqm/jquery.mobile-1.3.1.min.js"></script>
+    </head>
+    <body>
+	<!-- Kontrol -->
+<div data-role="page" id="page1">
+	<div data-theme="a" data-role="header">
+        <h5>
+            Smart Home App
+        </h5>
+		<a href="#" data-icon="delete" class="ui-btn-right">LOGOUT</a>
+	</div>
+    <div data-role="content">
+        <div data-role="collapsible-set" data-theme="b">
+            <div data-role="collapsible" data-collapsed="true" class="ui-body ui-body-f" align="center">
+                <h3>
+                    Lampu Ruang
+                </h3>
+				<a><img src="icon/lamp-on.png"></a>
+                <p><a data-role="button" data-inline="true" data-theme="a" href="#">
+                    Turn ON
+                </a></p>
+				<p><a data-role="button" data-inline="true" data-theme="a" href="#">
+                    Turn OFF
+                </a></p>
+            </div>
+            <div data-role="collapsible" data-collapsed="true" class="ui-body ui-body-f" align="center">
+                <h3>
+                    Lampu Taman
+                </h3>
+				<a><img src="icon/taman-on.png"></a>
+				<p><a data-role="button" data-inline="true" data-theme="a" href="#">
+                    ON
+                </a></p>
+				<p><a data-role="button" data-inline="true" data-theme="a" href="#">
+                    OFF
+                </a></p>
+            </div>
+            <div data-role="collapsible" data-collapsed="true" class="ui-body ui-body-f" align="center">
+                <h3>
+                    Kipas
+                </h3>
+				<p><a data-role="button" data-inline="true" data-theme="a" href="#">
+                    ON
+                </a></p>
+				<p><a data-role="button" data-inline="true" data-theme="a" href="#">
+                    OFF
+                </a></p>
+            </div>
+            <div data-role="collapsible" data-collapsed="true" class="ui-body ui-body-f" align="center">
+                <h3>
+                    Pintu Gerbang
+                </h3>
+				<a><img src="icon/gerbang-open.png"></a>
+				<p><a data-role="button" data-inline="true" data-theme="a" href="#">OPEN</a></p>
+				
+				<p><a data-role="button" data-inline="true" data-theme="a" href="#">
+                    CLOSE
+                </a></p>
+            </div>
+        </div>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="index.html" data-transition="flip" data-theme="a" data-icon="home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-transition="flip" data-theme="a" data-icon="star"
+                    class="ui-btn-active ui-state-persist">
+                        Kontrol
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" data-transition="flip" data-theme="a" data-icon="info">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </body>
+</html>
